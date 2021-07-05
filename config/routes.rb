@@ -6,9 +6,12 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
       get 'quotes', to: "quotes#index", as: 'quotes'
-      get 'authors', to: "quotes#authors", as: 'authors'
-      get 'quotes/random', to: "quotes#random", as: 'random'
+      get 'quotes/random', to: "quotes#random", as: 'randomuquote'
       get 'quotes/:id',  to: "quotes#show"
+
+      get 'authors', to: "authors#index", as: 'authors'
+      get 'authors/random', to: "authors#random", as: 'random_authors'
+      get 'authors/:id',  to: "authors#show"
     end
   end
 end

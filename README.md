@@ -38,10 +38,6 @@ bundle install
 ```sh
   rake db:migrate
 ```
-## Install webpacker
-```sh
-  bundle exec rake webpacker:instal
-```
   Using rubocop
   Finding indentation error run
 ```sh
