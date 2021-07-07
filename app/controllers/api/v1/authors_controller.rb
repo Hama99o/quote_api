@@ -1,6 +1,6 @@
 class Api::V1::AuthorsController < ApplicationController
-  before_action  :all_authors_with_authors, only: %i[index]
-  
+  before_action :all_authors_with_authors, only: %i[index]
+
   # GET /authors
   def index
     render json: @authors
