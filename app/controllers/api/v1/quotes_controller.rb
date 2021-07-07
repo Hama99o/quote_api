@@ -10,7 +10,10 @@ class Api::V1::QuotesController < ApplicationController
       nb_pages: nb_pages,
       search: params[:search]
     }
-    render json: @quotes
+    render json: {
+      quotes: @quotes.map { |quote| QuoteSerializer.new(quote) },
+      meta: meta
+    }
   end
 
   # GET /quotes/1
@@ -22,7 +25,9 @@ class Api::V1::QuotesController < ApplicationController
   def random
     nb = params[:nb].try(:to_i) || 1
     random_quote = Quote.order('RANDOM()').limit(nb)
-    render json: random_quote
+    render json: {
+      random_quote: random_quote.map { |quote| QuoteSerializer.new(quote) }
+    }
   end
 
   private

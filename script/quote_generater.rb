@@ -6,5 +6,5 @@ all_quotes.map do |quote|
     author = Author.create(name: quote[:quoteAuthor])
   end
 
-  Quote.create(quote_text: quote[:quoteText], author: author)
+  Quote.create(quote_text: quote[:quoteText], quote_genre: quote[:quoteGenre], author: author)
 end
