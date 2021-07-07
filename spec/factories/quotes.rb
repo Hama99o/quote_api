@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :quote do
-    qoute { "MyString" }
+    quote { "MyString" }
     author { "MyString" }
   end
 end
