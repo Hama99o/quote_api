@@ -10,16 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_03_105156) do
+ActiveRecord::Schema.define(version: 2021_07_05_121154) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "quotes", force: :cascade do |t|
-    t.string "qoute"
-    t.string "author"
+  create_table "authors", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "quotes", force: :cascade do |t|
+    t.text "quote_text"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "author_id", null: false
+    t.index ["author_id"], name: "index_quotes_on_author_id"
+  end
+
+  add_foreign_key "quotes", "authors"
 end
