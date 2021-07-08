@@ -1,6 +1,6 @@
 class Api::V1::AuthorsController < ApplicationController
-  before_action  :all_authors_with_authors, only: %i[index]
-  
+  before_action :all_authors_with_authors, only: %i[index]
+
   # GET /authors
   def index
     render json: @authors
@@ -15,9 +15,9 @@ class Api::V1::AuthorsController < ApplicationController
   def random
     nb = params[:nb].try(:to_i) || 2
     reject_id = params[:reject_id].try(:to_i)
-    random_author = Author.where.not(id: reject_id).order('RANDOM()').limit(nb)
+    random_authors = Author.where.not(id: reject_id).order('RANDOM()').limit(nb)
     render json: {
-      random: random_author.pluck(:name)
+      random_authors: random_authors.map { |random_author| AuthorSerializer.new(random_author) }
     }
   end
 

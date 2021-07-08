@@ -8,6 +8,7 @@
 require './script/all_quotes'
 
 all_quotes = AllQuotes.new.quote_array
+
 all_quotes.map do |quote|
   author = Author.find_by(name: quote[:quoteAuthor])
 
@@ -15,5 +16,5 @@ all_quotes.map do |quote|
     author = Author.create(name: quote[:quoteAuthor])
   end
 
-  Quote.create(quote_text: quote[:quoteText], author: author)
+  Quote.create(quote_text: quote[:quoteText], quote_genre: quote[:quoteGenre], author: author)
 end
