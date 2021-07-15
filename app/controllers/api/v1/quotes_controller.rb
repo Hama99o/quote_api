@@ -8,6 +8,7 @@ class Api::V1::QuotesController < ApplicationController
       page: @page,
       per: @per,
       nb_pages: nb_pages,
+      total_quotes: Quote.count,
       search: params[:search]
     }
     render json: {
@@ -36,7 +37,7 @@ class Api::V1::QuotesController < ApplicationController
     quotes = Quote.order(quote_text: :asc)
     if search
       quotes.joins(:author)
-            .where('authors.name LIKE :search OR quote_text LIKE :search', search: "%#{params[:search]}%")
+            .where('authors.name ILIKE :search OR quote_text ILIKE :search', search: "%#{params[:search]}%")
     else
       quotes.all
     end

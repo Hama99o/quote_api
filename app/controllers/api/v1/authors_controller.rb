@@ -26,7 +26,7 @@ class Api::V1::AuthorsController < ApplicationController
   def authors(search)
     authors = Author.order(name: :asc)
     if search
-      authors.where('name LIKE :search', search: "%#{params[:search]}%")
+      authors.where('name ILIKE :search', search: "%#{params[:search]}%")
     else
       authors.all
     end

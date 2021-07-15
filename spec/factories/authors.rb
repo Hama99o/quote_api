@@ -1,5 +1,7 @@
 FactoryBot.define do
   factory :author do
-    author { "MyString" }
+    sequence :name do |n|
+      "Billy Graham#{n}"
+    end
   end
 end

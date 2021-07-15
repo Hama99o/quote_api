@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   root to: "application#redirect_to_quotes"
-
-  resources :quotes, only: [:new, :create]
-
+  
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
       get 'quotes', to: "quotes#index", as: 'quotes'
