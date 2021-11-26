@@ -1,6 +1,6 @@
 # README for using API
 
-## to Installation the project go down
+## To Installation the project go down
 
 ![A test image](images/api_tech.jpg)
 
