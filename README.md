@@ -5,14 +5,14 @@
 ![A test image](images/api_tech.jpg)
 
 ### quotes-from-all-over-the-world API
-This api is created with Ruby on rails using postgresql. we bring you over 59,000 world famous quotes with authors and their genre completely free.
+This api is created with Ruby on rails using postgresql. We bring you over 59,000 world famous quotes with authors and their genre completely free.
 
 ## Where is this API used
 This API used in [https://quote-guessing-game.herokuapp.com/game](https://quote-guessing-game.herokuapp.com/game)
 
 _____________________
 
-## Here is the quote API
+## Here is the Quote API
 [https://quotes-from-all-over-the-world.herokuapp.com/api/v1/quotes](https://quotes-from-all-over-the-world.herokuapp.com/api/v1/quotes)
 
 # API Documentation
