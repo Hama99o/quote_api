@@ -169,6 +169,10 @@ bundle install
 ```sh
   rake db:migrate
 ```
+ init all quotes
+```sh
+  rake db:seed
+```
   Using rubocop
   Finding indentation error run
 ```sh
