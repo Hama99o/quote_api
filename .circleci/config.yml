@@ -18,7 +18,7 @@ jobs:
       - image: cimg/postgres:9.6.24
         environment:
           POSTGRES_USER: quote_api
-          POSTGRES_DB: quote_test
+          POSTGRES_DB: quote_api_test
           POSTGRES_PASSWORD: ""
       - image: redis
     steps:
