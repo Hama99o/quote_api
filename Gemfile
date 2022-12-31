@@ -29,7 +29,6 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring', '~> 4.1'
 
-  gem "nyan-cat-formatter"
   gem 'rspec-rails', '>= 3.7.2'
 
   gem 'guard-rspec', require: false
