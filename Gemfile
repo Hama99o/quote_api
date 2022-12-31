@@ -7,7 +7,6 @@ gem "rails", "~> 7.0.0"
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.12'
 
-gem 'webpacker', '~> 5.0'
 gem "sprockets-rails"
 
 gem 'turbolinks', '~> 5'
