@@ -49,11 +49,6 @@ jobs:
             sudo apt-get update
 
       - run:
-          name: Download xvfb
-          command: |
-            sudo apt-get install xvfb
-
-      - run:
           name: Bundle Install
           command: bundle check || bundle install
 
