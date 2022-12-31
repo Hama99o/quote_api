@@ -9,7 +9,7 @@ Bundler.require(*Rails.groups)
 module QuoteApi
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 7.0
+    config.load_defaults 7.1
 
     # Configuration for the application, engines, and railties goes here.
     #
@@ -18,10 +18,5 @@ module QuoteApi
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-    config.assets.enabled = false
-    config.serve_static_assets = false
-    config.assets.js_compressor = :uglifier
-    config.assets.compile = false
-    config.assets.digest = true
   end
 end
