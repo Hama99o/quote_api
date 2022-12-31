@@ -48,6 +48,7 @@ jobs:
           command: |
             sudo apt-get update
 
+      # Automate Your Development Process Quickly, Safely, and At Scale. Start Building Now. Configuration as Code. CI for Web & Mobile Apps. Powerful Caching.
       - run:
           name: Download xvfb
           command: |
